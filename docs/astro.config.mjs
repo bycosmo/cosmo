@@ -1,11 +1,13 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import starlightSpellChecker from 'starlight-spell-checker';
 
 // https://astro.build/config
 export default defineConfig({
 	integrations: [
 		starlight({
+			// plugins: [starlightSpellChecker()],
 			title: 'Cosmo',
 			social: {
 				github: 'https://github.com/bycosmo/cosmo',
@@ -36,7 +38,7 @@ export default defineConfig({
 			],
 			customCss: [
 				'./src/styles/index.css'
-			]
+			],
 		}),
 	],
 });
